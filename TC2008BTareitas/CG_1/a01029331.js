@@ -4,9 +4,10 @@ Tarea 1 - WebGL  - Transformaciones 2D con Pivote Independiente
  */
 
 'use strict';
-
-import * as twgl from 'twgl-base.js';
-import { M3 } from './2d-libs.js';
+/* AQUI LE PUSE LIBS EN LUGAR DE LIB Y POR ESO NO LO DETECTABA 
+Y TWGL TENIA MAL LA RUTA POR HACER REFERENCIA A UN ARCHIVO QUE NO ESTABA*/
+import * as twgl from 'twgl';
+import { M3 } from './2d-lib.js';
 import GUI from 'lil-gui';
 
 
@@ -71,8 +72,18 @@ function buildSmileyGeometry() {
                 -40, 30,
                 40, 30,
                 40, 20,
-                
-                
+
+                // Diente izquierdo (FALTABA COLOCAR LA POSICION DE LOS DIENTES QUE NO SE GUARDO)
+                -20, 20,
+                -10, 20,
+                -10, 30,
+                -20, 30,
+
+                // Diente derecho
+                10, 20,
+                20, 20,
+                20, 30,
+                10, 30
             ]
         },
         a_color: {
